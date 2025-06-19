@@ -1,3 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define el "\n"
+#define int long long
+
+/*   وَلَا تَيْأَسُوا مِن رَّوْحِ اللَّهِ ۖ إِنَّهُ لَا يَيْأَسُ مِن رَّوْحِ اللَّهِ إِلَّا الْقَوْمُ الْكَافِرُون   */
 class MO {
 
     struct query {
@@ -34,10 +41,9 @@ public:
     void process() {
         vector<int>ans(n);
         std::sort(q.begin(), q.end(), [&] (query& a, query& b) {
-            if (a.l / sq != b.l / sq) {
+            if (a.l / sq != b.l / sq)
                 return a.l / sq < b.l / sq;
-            }
-            return a.r < b.r;
+            return ((a.l / sq) & 1 ? a.r<b.r : a.r>b.r);
 
         });
         int l = 0, r = -1;
@@ -55,3 +61,23 @@ public:
     }
 
 };
+void ziad()
+{
+}
+
+signed main()
+{
+    cin.tie(nullptr)->sync_with_stdio(false);
+    if (fopen("inp.txt", "r"))
+    {
+        freopen("inp.txt", "r", stdin);
+        freopen("outp.txt", "w", stdout);
+    }
+    int testcase = 1;
+    // cin >> testcase;
+    for (int i = 1; i <= testcase; i++)
+    {
+        ziad();
+    }
+    return 0;
+}
