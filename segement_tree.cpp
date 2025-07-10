@@ -55,7 +55,7 @@ private:
         return merge(left, right);
     }
     int search(int lx, int rx, int nd, int ix) {
-        if (rx - lx == 1)return (ix ? 0 : lx);
+        if (rx - lx == 0)return (ix ? 0 : lx);
         int mid = (lx + rx) / 2;
         if (seg[2 * nd + 1].val > ix) {
             return search(lx, mid, 2 * nd + 1, ix);
